@@ -23,7 +23,12 @@
             "extensions": [
                 "rust-lang.rust-analyzer", // Recommended, rust-analyzer, to validate Rust code
                 "tauri-apps.tauri-vscode", // Recommended, tauri.conf.json schema
-                "ms-azuretools.vscode-docker" // Optional, primarily helps me develop the Dockerfile
+                "ms-azuretools.vscode-docker", // Optional, primarily helps me develop the Dockerfile
+                "vscjava.vscode-gradle", // Optional, used for editing gradle files directly in vscode
+                "wayou.vscode-todo-highlight", // Optional, used for tracking TODO
+                "gruntfuggly.todo-tree", // Optional, used for tracking TODO
+                "eamodio.gitlens", // Optional, used for github
+                "github.vscode-pull-request-github"
             ],
             "settings": {}
         }
