@@ -29,7 +29,8 @@
                 "gruntfuggly.todo-tree", // Optional, used for tracking TODO
                 "eamodio.gitlens", // Optional, used for github
                 "github.vscode-pull-request-github",
-                "esbenp.prettier-vscode"
+                "esbenp.prettier-vscode",
+                "mathiasfrohlich.kotlin"
             ],
             "settings": {}
         }
