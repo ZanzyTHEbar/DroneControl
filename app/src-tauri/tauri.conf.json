@@ -7,59 +7,173 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "squable",
+    "productName": "DroneControl",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "clipboard": {
+        "all": false,
+        "readText": false,
+        "writeText": false
+      },
+      "dialog": {
+        "all": true,
+        "ask": true,
+        "confirm": true,
+        "message": true,
+        "open": true,
+        "save": true
+      },
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true,
+        "scope": [
+          "$APP/*",
+          "$APPDATA/*",
+          "$APPCONFIG/*"
+        ]
+      },
+      "globalShortcut": {
+        "all": false
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": [
+          "http://127.0.0.1:7856/*",
+          "https://api.github.com/repos/lorow/OpenIris/*"
+        ]
+      },
+      "notification": {
+        "all": true
+      },
+      "os": {
+        "all": true
+      },
+      "path": {
+        "all": true
+      },
+      "process": {
+        "all": false,
+        "exit": true,
+        "relaunch": true,
+        "relaunchDangerousAllowSymlinkMacos": false
+      },
+      "protocol": {
+        "all": false,
+        "asset": true,
+        "assetScope": [
+          "$APPCONFIG/*",
+          "$APPDATA/*",
+          "$RESOURCE/*"
+        ]
+      },
+      "shell": {
+        "all": false,
+        "execute": false,
+        "open": ".*",
+        "scope": [],
+        "sidecar": true
+      },
+      "window": {
+        "all": false,
+        "center": true,
+        "close": true,
+        "create": true,
+        "hide": true,
+        "maximize": true,
+        "minimize": true,
+        "print": false,
+        "requestUserAttention": true,
+        "setAlwaysOnTop": false,
+        "setCursorGrab": false,
+        "setCursorIcon": false,
+        "setCursorPosition": false,
+        "setCursorVisible": false,
+        "setDecorations": true,
+        "setFocus": true,
+        "setFullscreen": true,
+        "setIcon": false,
+        "setMaxSize": false,
+        "setMinSize": false,
+        "setPosition": true,
+        "setResizable": true,
+        "setSize": true,
+        "setSkipTaskbar": false,
+        "setTitle": true,
+        "show": true,
+        "startDragging": true,
+        "unmaximize": true,
+        "unminimize": true
+      }
     },
     "bundle": {
       "active": true,
       "category": "Entertainment",
-      "copyright": "",
+      "copyright": "EyeTrackVR",
       "deb": {
         "depends": []
       },
-      "externalBin": [],
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "identifier": "com.squable.dev",
+      "identifier": "com.dronecontrol.dev",
       "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
       "resources": [],
+      "externalBin": [],
       "shortDescription": "",
       "targets": "all",
+      "macOS": {
+        "frameworks": [],
+        "minimumSystemVersion": "",
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "entitlements": null
+      },
       "windows": {
+        "allowDowngrades": false,
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "timestampUrl": "",
+        "webviewInstallMode": {
+          "type": "downloadBootstrapper"
+        },
+        "wix": {
+          "language": [
+            "en-US"
+          ]
+        }
       }
     },
     "security": {
-      "csp": null
+      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self' asset: https://asset.localhost media-src stream: https://stream.localhost"
     },
     "updater": {
-      "active": false
+      "active": false,
+      "dialog": true,
+      "endpoints": [
+        "https://youtu.be/ZXjlZBisYPQ"
+      ],
+      "pubkey": ""
     },
     "windows": [
       {
         "fullscreen": false,
         "height": 600,
+        "width": 800,
         "resizable": true,
-        "title": "Squable",
-        "width": 800
+        "center": true,
+        "title": "EyeTrackVR",
+        "visible": true,
+        "decorations": false,
+        "transparent": true
       }
     ]
   }

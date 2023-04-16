@@ -13,7 +13,8 @@ export default defineConfig(async () => {
             alias: {
                 '@interfaces': path.resolve(__dirname, './src/interfaces'),
                 '@components': path.resolve(__dirname, './src/components'),
-                '@redux': path.resolve(__dirname, './src/redux'),
+                '@store': path.resolve(__dirname, './src/store'),
+                '@routes': path.resolve(__dirname, './src/routes'),
                 '@pages': path.resolve(__dirname, './src/pages'),
                 '@styles': path.resolve(__dirname, './src/styles'),
                 '@config': path.resolve(__dirname, './src/config'),

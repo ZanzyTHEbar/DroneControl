@@ -1,11 +1,11 @@
 [package]
-name = "app"
+name = "drone_control"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
-default-run = "app"
+description = "DroneControl"
+authors = ["ZanyTHEbar, DaOfficialWizard"]
+license = "MIT"
+repository = "https://github.com/ZanyTHEbar/DroneControl"
+default-run = "drone_control"
 edition = "2021"
 rust-version = "1.64"
 
@@ -19,12 +19,12 @@ tauri-build = { version = "2.0.0-alpha.1", features = [] }
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "2.0.0-alpha.3", features = [] }
+tauri = { version = "2.0.0-alpha.3", features = ["dialog-all", "fs-all", "http-all", "notification-all", "os-all", "path-all", "process-exit", "process-relaunch", "protocol-asset", "shell-open", "shell-sidecar", "window-center", "window-close", "window-create", "window-hide", "window-maximize", "window-minimize", "window-request-user-attention", "window-set-decorations", "window-set-focus", "window-set-fullscreen", "window-set-position", "window-set-resizable", "window-set-size", "window-set-title", "window-show", "window-start-dragging", "window-unmaximize", "window-unminimize"] }
 
 [features]
 # by default Tauri runs in production mode
 # when `tauri dev` runs it is executed with `cargo run --no-default-features` if `devPath` is an URL
-default = [ "custom-protocol" ]
+default = ["custom-protocol"]
 # this feature is used for production builds where `devPath` points to the filesystem
 # DO NOT remove this
-custom-protocol = [ "tauri/custom-protocol" ]
+custom-protocol = ["tauri/custom-protocol"]

@@ -1,7 +1,11 @@
 {
-  "name": "vite-template-solid-tauri",
-  "version": "0.0.0",
-  "description": "",
+  "name": "dronecontrol",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A SolidJS project for Controlling Drones",
+  "author": "DroneControl",
+  "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -14,8 +18,6 @@
     "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
     "format": "yarn run lint --fix & yarn prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
   },
-  "type": "module",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.18.0",
@@ -49,6 +51,30 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.8",
     "solid-js": "^1.6.6",
-    "yarn": "^1.22.19"
+    "solid-three": "^0.0.3",
+    "solidjs-use": "^2.0.0",
+    "three": "^0.151.3",
+    "@kobalte/core": "^0.8.2",
+    "@kobalte/tailwindcss": "^0.4.1",
+    "@solid-primitives/i18n": "^1.1.2",
+    "@solid-primitives/map": "^0.3.1",
+    "@solidjs/meta": "^0.28.0",
+    "@solidjs/router": "^0.7.0",
+    "@stitches/core": "^1.2.8",
+    "clsx": "^1.2.1",
+    "localforage": "^1.10.0",
+    "moment": "^2.29.3",
+    "solid-form-handler": "^1.0.0-alpha.5",
+    "solid-headless": "^0.13.0",
+    "solid-i18n": "^1.0.4",
+    "solid-icons": "^1.0.4",
+    "solid-spinner": "^0.1.9",
+    "solid-transition-group": "^0.0.12",
+    "solidjs-icons": "^1.0.11",
+    "tauri-plugin-store-api": "https://github.com/tauri-apps/tauri-plugin-store",
+    "tauri-plugin-upload-api": "https://github.com/tauri-apps/tauri-plugin-upload",
+    "undici": "^5.11.0",
+    "yarn": "^1.22.19",
+    "yup": "^0.32.11"
   }
 }

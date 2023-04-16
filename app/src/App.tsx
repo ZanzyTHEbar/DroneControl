@@ -1,26 +1,20 @@
-import styles from './App.module.css'
-import logo from './logo.svg'
-import type { Component } from 'solid-js'
-import CountingComponent from '@components/Counter'
+import { lazy, onMount, Suspense } from 'solid-js'
+import { handleAppBoot, handleTitlebar } from '@utils/hooks/app'
 
-const App: Component = () => {
+const AppRoutes = lazy(() => import('@routes/Routes'))
+
+const App = () => {
+    const ref = document.getElementById('titlebar')
+    onMount(() => {
+        handleTitlebar(false)
+        handleAppBoot()
+    })
+
     return (
-        <div class={styles.App}>
-            <header class={styles.header}>
-                <img src={logo} class={styles.logo} alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    class={styles.link}
-                    href="https://github.com/solidjs/solid"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Learn Solid
-                </a>
-                <br />
-                <CountingComponent />
-            </header>
+        <div class="App overflow-y-auto items-center">
+            <Suspense>
+                <AppRoutes />
+            </Suspense>
         </div>
     )
 }

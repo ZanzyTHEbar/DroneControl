@@ -42,6 +42,21 @@
         "liveServer.settings.multiRootWorkspaceName": "Example",
         "[shellscript]": {
             "editor.defaultFormatter": "shakram02.bash-beautify"
-        }
+        },
+        "[css]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "cSpell.words": [
+            "clsx",
+            "dronecontrol",
+            "kobalte",
+            "solidjs",
+            "soundfile",
+            "undici",
+            "vorbis"
+        ]
     }
 }

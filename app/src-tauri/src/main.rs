@@ -1,8 +1,9 @@
 #![cfg_attr(
-    all(not(debug_assertions), target_os = "windows"),
-    windows_subsystem = "windows"
+  all(not(debug_assertions), target_os = "windows"),
+  windows_subsystem = "windows"
 )]
 
 fn main() {
-    app::AppBuilder::new().run();
+  drone_control::AppBuilder::new().run();
 }
+
