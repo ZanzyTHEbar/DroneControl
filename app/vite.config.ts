@@ -25,7 +25,9 @@ export default defineConfig(async () => {
                 '@utils': path.resolve(__dirname, './src/utils'),
             },
         },
-        plugins: [solidPlugin()],
+        plugins: [
+            solidPlugin(),
+        ],
         server: {
             host: '0.0.0.0', // listen on all addresses
             port: 3000,

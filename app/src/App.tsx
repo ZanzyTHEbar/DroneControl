@@ -4,7 +4,7 @@ import { handleAppBoot, handleTitlebar } from '@utils/hooks/app'
 const AppRoutes = lazy(() => import('@routes/Routes'))
 
 const App = () => {
-    const ref = document.getElementById('titlebar')
+    //const ref = document.getElementById('titlebar')
     onMount(() => {
         handleTitlebar(false)
         handleAppBoot()

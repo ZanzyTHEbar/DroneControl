@@ -11,21 +11,29 @@ const AppRoutes = () => {
     })
 
     return (
-        <main class="pb-[5rem] w-[100%] px-8 max-w-[1920px]">
-            <div class="header-wrapper">
-                {/* <Header
-                    name={connectedUserName() ? `Welcome ${connectedUserName()}` : 'Welcome!'}
-                    hideButtons={hideHeaderButtons()}
-                    onClick={() => {
-                        setHideHeaderButtons(false)
-                    }}
-                /> */}
-            </div>
-            <div class="pt-[70px]">
-                <Path />
-            </div>
-        </main>
+        <>
+            <Path />
+        </>
     )
 }
 
 export default AppRoutes
+
+/* 
+
+<main class="pb-[5rem] w-[100%] px-8 max-w-[1920px]">
+    <div class="header-wrapper">
+        <Header
+            name={connectedUserName() ? `Welcome ${connectedUserName()}` : 'Welcome!'}
+            hideButtons={hideHeaderButtons()}
+            onClick={() => {
+                setHideHeaderButtons(false)
+            }}
+        />
+    </div>
+    <div class="pt-[70px]">
+    </div>
+</main>
+
+
+*/

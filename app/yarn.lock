@@ -3115,6 +3115,11 @@ grapheme-splitter@^1.0.4:
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
+gsap@^3.11.5:
+  version "3.11.5"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.11.5.tgz#97ef65091f43868be387803f9db277e8cd5bd041"
+  integrity sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==
+
 handle-thing@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.1.tgz#857f79ce359580c340d43081cc648970d0bb234e"
@@ -4866,14 +4871,6 @@ solid-spinner@^0.1.9:
   resolved "https://registry.yarnpkg.com/solid-spinner/-/solid-spinner-0.1.9.tgz#4292edf195b779f22a4fd68cdee522d82e7f6507"
   integrity sha512-cwSmcvlSm134MzUHL1/Il5Mv0/eWTuj0D3A8TBEvVGgN00hBCyHV9wbtfkK2uOlk4gop4FvvI9UFo9mQnONx5g==
 
-solid-three@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/solid-three/-/solid-three-0.0.3.tgz#f60318f2aad36983314820cd7cc4dfb5ff106a49"
-  integrity sha512-7zUByNc4BcvBBQCxvrbybn1gDNa6Gvhtbzsj5gv9Hz4NN0xWt1cUawk77rd5YDBNNXwHRMLf59VgLZQBPFHKzg==
-  dependencies:
-    "@types/three" "^0.135.0"
-    zustand "^3.6.7"
-
 solid-transition-group@^0.0.12:
   version "0.0.12"
   resolved "https://registry.yarnpkg.com/solid-transition-group/-/solid-transition-group-0.0.12.tgz#5b5d542aa20d4ff666ac582b6f4863c34743769b"
@@ -5573,8 +5570,3 @@ yup@^0.32.11:
     nanoclone "^0.2.1"
     property-expr "^2.0.4"
     toposort "^2.0.2"
-
-zustand@^3.6.7:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.7.2.tgz#7b44c4f4a5bfd7a8296a3957b13e1c346f42514d"
-  integrity sha512-PIJDIZKtokhof+9+60cpockVOq05sJzHCriyvaLBmEJixseQ1a5Kdov6fWZfWOu5SK9c+FhH1jU0tntLxRJYMA==

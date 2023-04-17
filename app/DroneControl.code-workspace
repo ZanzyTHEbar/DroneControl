@@ -53,10 +53,14 @@
             "clsx",
             "dronecontrol",
             "kobalte",
+            "Resizer",
+            "skyblue",
             "solidjs",
             "soundfile",
             "undici",
-            "vorbis"
+            "updatables",
+            "vorbis",
+            "wireframe"
         ]
     }
 }

@@ -1,21 +1,7 @@
-import { Canvas } from 'solid-three'
-import { Box } from '@components/Box'
+import { CanvasHandler } from '@components/CanvasHandler'
 
 const Home = () => {
-    return (
-        <Canvas
-            camera={{
-                position: [3, 3, 3],
-            }}
-            gl={{
-                antialias: true,
-            }}
-            shadows>
-            <Box />
-            <ambientLight />
-            <spotLight position={[0, 5, 10]} intensity={1} />
-        </Canvas>
-    )
+    return <CanvasHandler />
 }
 
 export default Home

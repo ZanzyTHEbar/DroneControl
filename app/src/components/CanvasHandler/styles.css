@@ -1,0 +1,12 @@
+#scene-container {
+    /* tell our scene container to take up the full page */
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+
+    /*
+    Set the container's background color to the same as the scene's
+    background to prevent flashing on load
+  */
+    background-color: skyblue;
+}
