@@ -1,6 +1,8 @@
-import * as path from 'path'
+import { resolve } from 'path'
 import { internalIpV4 } from 'internal-ip'
+import { DOMElements, SVGElements } from 'solid-js/web/dist/dev.cjs'
 import { defineConfig } from 'vite'
+import inspect from 'vite-plugin-inspect'
 import solidPlugin from 'vite-plugin-solid'
 
 // https://vitejs.dev/config/
@@ -11,22 +13,41 @@ export default defineConfig(async () => {
     const config = {
         resolve: {
             alias: {
-                '@interfaces': path.resolve(__dirname, './src/interfaces'),
-                '@components': path.resolve(__dirname, './src/components'),
-                '@store': path.resolve(__dirname, './src/store'),
-                '@routes': path.resolve(__dirname, './src/routes'),
-                '@pages': path.resolve(__dirname, './src/pages'),
-                '@styles': path.resolve(__dirname, './src/styles'),
-                '@config': path.resolve(__dirname, './src/config'),
-                '@src': path.resolve(__dirname, './src'),
-                '@assets': path.resolve(__dirname, './assets'),
-                '@hooks': path.resolve(__dirname, './src/utils/hooks'),
-                '@static': path.resolve(__dirname, './src/static'),
-                '@utils': path.resolve(__dirname, './src/utils'),
+                '@interfaces': resolve(__dirname, './src/interfaces'),
+                '@components': resolve(__dirname, './src/components'),
+                '@store': resolve(__dirname, './src/store'),
+                '@routes': resolve(__dirname, './src/routes'),
+                '@pages': resolve(__dirname, './src/pages'),
+                '@styles': resolve(__dirname, './src/styles'),
+                '@config': resolve(__dirname, './src/config'),
+                '@src': resolve(__dirname, './src'),
+                '@assets': resolve(__dirname, './assets'),
+                '@hooks': resolve(__dirname, './src/utils/hooks'),
+                '@static': resolve(__dirname, './src/static'),
+                '@utils': resolve(__dirname, './src/utils'),
             },
         },
         plugins: [
-            solidPlugin(),
+            solidPlugin({
+                solid: {
+                    moduleName: 'solid-js/web',
+                    // @ts-ignore
+                    generate: 'dynamic',
+                    renderers: [
+                        {
+                            name: 'dom',
+                            moduleName: 'solid-js/web',
+                            elements: [...DOMElements.values(), ...SVGElements.values()],
+                        },
+                        {
+                            name: 'universal',
+                            moduleName: 'solid-three',
+                            elements: [],
+                        },
+                    ],
+                },
+            }),
+            inspect(),
         ],
         server: {
             host: '0.0.0.0', // listen on all addresses
@@ -38,6 +59,7 @@ export default defineConfig(async () => {
                 port: 5183,
             },
         },
+        build: {},
     }
     return config
 })

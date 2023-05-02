@@ -1,8 +1,14 @@
 {
     "folders": [
         {
+            "name": "app",
+            "path": "./app"
+        },
+        {
+            
+            "name": "repo",
             "path": "."
-        }
+        },
     ],
     "settings": {
         "files.autoSave": "afterDelay",
