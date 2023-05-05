@@ -120,7 +120,7 @@
     "bundle": {
       "active": true,
       "category": "Entertainment",
-      "copyright": "EyeTrackVR",
+      "copyright": "DroneControl",
       "deb": {
         "depends": []
       },
@@ -170,7 +170,7 @@
         "width": 800,
         "resizable": true,
         "center": true,
-        "title": "EyeTrackVR",
+        "title": "DroneControl",
         "visible": true,
         "decorations": false,
         "transparent": true
