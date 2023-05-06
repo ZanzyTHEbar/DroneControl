@@ -1,1 +1,0 @@
-declare module 'solid-js/web/dist/dev.cjs';

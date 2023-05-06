@@ -28,7 +28,7 @@ const Box: Component = () => {
             </mesh>
             <Html position={[1, 1, 1]} occlude>
                 <button
-                    class='rounded-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+                    class='rounded-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4'
                     onClick={() => {
                         console.log('clicked')
 
