@@ -1,4 +1,5 @@
 //import { CanvasHandler } from '@components/CanvasHandler'
+
 import { Canvas } from 'solid-three'
 import type { Component } from 'solid-js'
 import Box from '@components/Box'

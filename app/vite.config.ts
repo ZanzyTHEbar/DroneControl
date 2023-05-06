@@ -3,6 +3,7 @@ import { internalIpV4 } from 'internal-ip'
 import { DOMElements, SVGElements } from 'solid-js/web/dist/dev.cjs'
 import { defineConfig } from 'vite'
 import inspect from 'vite-plugin-inspect'
+import mkcert from 'vite-plugin-mkcert'
 import solidPlugin from 'vite-plugin-solid'
 
 // https://vitejs.dev/config/
@@ -48,8 +49,10 @@ export default defineConfig(async () => {
                 },
             }),
             inspect(),
+            //mkcert(),
         ],
         server: {
+            //https: true,
             host: '0.0.0.0', // listen on all addresses
             port: 3000,
             strictPort: true,

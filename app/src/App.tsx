@@ -1,5 +1,4 @@
 import { lazy, onMount, Suspense } from 'solid-js'
-import Home from '@pages/Home'
 import { handleAppBoot, handleTitlebar } from '@utils/hooks/app'
 
 const AppRoutes = lazy(() => import('@routes/Routes'))
@@ -16,7 +15,6 @@ const App = () => {
             <Suspense>
                 <AppRoutes />
             </Suspense>
-            <Home />
         </div>
     )
 }
