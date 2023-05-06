@@ -53,6 +53,7 @@
     "vite-plugin-solid": "^2.5.0"
   },
   "dependencies": {
+    "@azure/static-web-apps-cli": "^1.1.1",
     "@kobalte/core": "^0.8.2",
     "@kobalte/tailwindcss": "^0.4.1",
     "@solid-primitives/i18n": "^1.1.2",
@@ -83,6 +84,7 @@
     "three": "^0.152.2",
     "three-stdlib": "^2.21.11",
     "undici": "^5.11.0",
+    "workbox-precaching": "^6.5.4",
     "yup": "^0.32.11"
   }
 }
