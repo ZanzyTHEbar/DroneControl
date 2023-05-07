@@ -4,6 +4,7 @@ import { DOMElements, SVGElements } from 'solid-js/web/dist/dev.cjs'
 import { defineConfig } from 'vite'
 import inspect from 'vite-plugin-inspect'
 import mkcert from 'vite-plugin-mkcert'
+import { VitePWA } from 'vite-plugin-pwa'
 import solidPlugin from 'vite-plugin-solid'
 
 // https://vitejs.dev/config/
@@ -12,6 +13,7 @@ export default defineConfig(async () => {
 
     /** @type {import('vite').UserConfig} */
     const config = {
+        base: '/',
         resolve: {
             alias: {
                 '@interfaces': resolve(__dirname, './src/interfaces'),
@@ -49,6 +51,19 @@ export default defineConfig(async () => {
                 },
             }),
             inspect(),
+            VitePWA({
+                strategies: 'injectManifest',
+                registerType: 'autoUpdate',
+                injectManifest: {
+                    swSrc: 'public/sw.js',
+                    swDest: 'dist/sw.js',
+                    globDirectory: 'dist',
+                    globPatterns: ['**/*.{html,js,css,json,png}'],
+                },
+                devOptions: {
+                    enabled: true,
+                },
+            }),
             //mkcert(),
         ],
         server: {
@@ -62,7 +77,11 @@ export default defineConfig(async () => {
                 port: 5183,
             },
         },
-        build: {},
+        build: {
+            sourcemap: true,
+            /* assetsDir: 'code', */
+            target: ['esnext', 'edge100', 'firefox100', 'chrome100', 'safari18'],
+        },
     }
     return config
 })

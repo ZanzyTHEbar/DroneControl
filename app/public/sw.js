@@ -16,6 +16,30 @@
         - Badges: https://microsoft.github.io/win-student-devs/#/30DaysOfPWA/advanced-capabilities/07?id=application-badges
     */
 
+import { precacheAndRoute } from 'workbox-precaching/precacheAndRoute'
+
+let notifPermission = false
+
+self.addEventListener('push', (event) => {
+    if (!(self.Notification && self.Notification.permission === 'granted')) {
+        self.registration.requestPermission((status) => {
+            if (status === 'granted') {
+                notifPermission = true
+            } else {
+                console.log('Notification permission status:', status)
+            }
+        })
+    }
+
+    if (notifPermission) {
+        event.waitUntil(
+            self.registration.showNotification('Hello!', {
+                body: 'This is a push notification!',
+            })
+        )
+    }
+})
+
 const HOSTNAME_WHITELIST = [
     self.location.hostname,
     'fonts.gstatic.com',
@@ -94,3 +118,5 @@ self.addEventListener('fetch', (event) => {
         )
     }
 })
+
+precacheAndRoute(self.__WB_MANIFEST || [])

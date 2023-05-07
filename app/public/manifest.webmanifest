@@ -1,4 +1,5 @@
 {
+    "id": "/",
     "name": "DroneControl",
     "short_name": "DroneControl",
     "start_url": "/",
@@ -32,13 +33,11 @@
             "description": "A screenshot of the home page"
         }
     ],
-    "related_applications": [
-        {
-            "platform": "windows",
-            "url": " The URL to your app in that app store"
-        }
-    ],
+    "related_applications": [],
+    "display_override": [],
     "prefer_related_applications": false,
+    "features": ["Cross Platform", "fast", "simple"],
+    "categories": ["social"],
     "shortcuts": [
         {
             "name": "DroneControl",
